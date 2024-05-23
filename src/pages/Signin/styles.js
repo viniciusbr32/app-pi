@@ -7,6 +7,7 @@ export const Container = styled.div`
 	flex-direction: column;
 	gap: 10px;
 	height: 100vh;
+	background: #1e90ff;
 `;
 
 export const Content = styled.div`
@@ -49,4 +50,13 @@ export const Strong = styled.strong`
 		text-decoration: none;
 		color: #676767;
 	}
+`;
+
+export const Select = styled.select`
+	padding: 0.5rem;
+	font-size: 1rem;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
+	margin-bottom: 1rem;
 `;

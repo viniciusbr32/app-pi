@@ -1,0 +1,156 @@
+{
+  "usuarios": [
+    {
+      "id": "b25b",
+      "email": "professor@gmail.com",
+      "senha": "32515082",
+      "tipoUsuario": "professor"
+    },
+    {
+      "id": "3ef0",
+      "email": "professor@gmail.com",
+      "senha": "32515082",
+      "tipoUsuario": "professor"
+    },
+    {
+      "id": "7000",
+      "email": "alunonovo12345@gmail.com",
+      "senha": "32515082",
+      "tipoUsuario": "aluno"
+    },
+    {
+      "id": "0f50",
+      "email": "matheus123@gmail.com",
+      "senha": "32515082",
+      "tipoUsuario": "aluno"
+    }
+  ],
+  "notas": [
+    {
+      "id": "4eea",
+      "aluno": "Vinicius Moreira",
+      "ra": "1234",
+      "bimestre": "1",
+      "materias": [
+        {
+          "nome": "Matemática",
+          "nota": "10",
+          "falta": ""
+        },
+        {
+          "nome": "Português",
+          "nota": "8",
+          "falta": ""
+        },
+        {
+          "nome": "História",
+          "nota": "7",
+          "falta": ""
+        },
+        {
+          "nome": "Geografia",
+          "nota": "9",
+          "falta": ""
+        },
+        {
+          "nome": "Biologia",
+          "nota": "5",
+          "falta": ""
+        },
+        {
+          "nome": "Física",
+          "nota": "4",
+          "falta": ""
+        },
+        {
+          "nome": "Inglês",
+          "nota": "5",
+          "falta": ""
+        },
+        {
+          "nome": "Filosofia",
+          "nota": "5",
+          "falta": ""
+        },
+        {
+          "nome": "Sociologia",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Ed Fisica",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Química",
+          "nota": "",
+          "falta": ""
+        }
+      ]
+    },
+    {
+      "id": "fe61",
+      "aluno": "Marcelo",
+      "ra": "9090",
+      "bimestre": "1",
+      "materias": [
+        {
+          "nome": "Matemática",
+          "nota": "7",
+          "falta": "3"
+        },
+        {
+          "nome": "Português",
+          "nota": "7",
+          "falta": "3"
+        },
+        {
+          "nome": "História",
+          "nota": "8",
+          "falta": ""
+        },
+        {
+          "nome": "Geografia",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Biologia",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Física",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Inglês",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Filosofia",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Sociologia",
+          "nota": "",
+          "falta": ""
+        },
+        {
+          "nome": "Ed Fisica",
+          "nota": "5",
+          "falta": ""
+        },
+        {
+          "nome": "Química",
+          "nota": "",
+          "falta": ""
+        }
+      ]
+    }
+  ]
+}

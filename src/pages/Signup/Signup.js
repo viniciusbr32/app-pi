@@ -3,18 +3,16 @@ import { Input } from '../../components/input/Input';
 import { Button } from '../../components/Button/Button';
 import * as C from './styles';
 import { Link, useNavigate } from 'react-router-dom';
-import { useAuth } from '../../hooks/useAuth';
 
 export const Signup = () => {
 	const [email, setEmail] = useState('');
 	const [emailConf, setEmailConf] = useState('');
 	const [senha, setSenha] = useState('');
+	const [tipoUsuario, setTipoUsuario] = useState('aluno');
 	const [error, setError] = useState('');
 	const navigate = useNavigate();
 
-	const { signup } = useAuth();
-
-	const handleSignup = () => {
+	const handleSignup = async () => {
 		if (!email || !emailConf || !senha) {
 			setError('Preencha todos os campos');
 			return;
@@ -23,15 +21,24 @@ export const Signup = () => {
 			return;
 		}
 
-		const res = signup(email, senha);
+		try {
+			const response = await fetch('http://localhost:5000/usuarios', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+				},
+				body: JSON.stringify({ email, senha, tipoUsuario }),
+			});
 
-		if (res) {
-			setError(res);
-			return;
+			if (!response.ok) {
+				throw new Error('Erro ao cadastrar usuário');
+			}
+
+			alert('Usuário cadastrado com sucesso!');
+			navigate('/');
+		} catch (error) {
+			setError(error.message);
 		}
-
-		alert('Usuário cadastrado com sucesso!');
-		navigate('/');
 	};
 
 	return (
@@ -56,6 +63,13 @@ export const Signup = () => {
 					value={senha}
 					onChange={(e) => [setSenha(e.target.value), setError('')]}
 				/>
+				<C.Select // Utilizando o componente de select estilizado
+					value={tipoUsuario}
+					onChange={(e) => setTipoUsuario(e.target.value)}
+				>
+					<C.Option value='aluno'>Aluno</C.Option>
+					<C.Option value='professor'>Professor</C.Option>
+				</C.Select>
 				<C.labelError>{error}</C.labelError>
 				<Button text='Inscrever-se' onClick={handleSignup} />
 				<C.LabelSignin>
