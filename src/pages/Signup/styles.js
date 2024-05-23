@@ -6,6 +6,7 @@ export const Container = styled.div`
 	justify-content: center;
 	flex-direction: column;
 	gap: 10px;
+	background: #1e90ff;
 	height: 100vh;
 `;
 
@@ -26,7 +27,7 @@ export const Content = styled.div`
 export const Label = styled.label`
 	font-size: 18px;
 	font-weight: 600;
-	color: #FFF;
+	color: #fff;
 `;
 
 export const LabelSignin = styled.label`
@@ -46,4 +47,15 @@ export const Strong = styled.strong`
 		text-decoration: none;
 		color: #676767;
 	}
+`;
+
+export const Select = styled.select`
+	width: 100%;
+	padding: 0.5rem;
+	font-size: 1rem;
+	margin-bottom: 1rem;
+`;
+
+export const Option = styled.option`
+	font-size: 1rem;
 `;
